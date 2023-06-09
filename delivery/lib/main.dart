@@ -67,7 +67,17 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-
+  
+   @override
+  Widget build2(BuildContext context) {
+    return Container(
+      child: Image.asset(
+        'pizza_portuguesa.png', // Replace with your image asset path
+        width: 200,
+        height: 200,
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -77,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
@@ -112,6 +123,9 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Image.asset("assets/images/pizza_portuguesa.png",semanticLabel: "pizza",)
+            ,
+            
           ],
         ),
       ),
